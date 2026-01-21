@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane
+        prefHeight="459.0"
+        prefWidth="672.0"
+        styleClass="background-Color"
+        stylesheets="@stopwatch.css"
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.sgr.utilitytools_v1.stopwatch.StopwatchController">
+
+    <children>
+        <SplitPane dividerPositions="0.5"
+                   AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+
+            <items>
+                <!-- CRONÔMETRO -->
+                <AnchorPane>
+                    <children>
+
+                        <Circle fx:id="bgCircle"
+                                layoutX="166.0"
+                                layoutY="144.0"
+                                radius="106.0"
+                                styleClass="bg-circle"/>
+
+                        <Arc fx:id="bgArc"
+                             layoutX="166.0"
+                             layoutY="144.0"
+                             startAngle="90.0"
+                             length="360.0"
+                             radiusX="106.0"
+                             radiusY="106.0"
+                             styleClass="bg-arc"/>
+
+                        <Label fx:id="timeLabel"
+                               layoutX="94.0"
+                               layoutY="123.0"
+                               prefWidth="144.0"
+                               text="00:00:00">
+                            <font>
+                                <Font size="36.0"/>
+                            </font>
+                        </Label>
+
+                        <Button layoutX="42.0"
+                                layoutY="298.0"
+                                text="Start"
+                                onAction="#play"/>
+
+                        <Button layoutX="140.0"
+                                layoutY="298.0"
+                                text="Stop"
+                                onAction="#stop"/>
+
+                    </children>
+                </AnchorPane>
+
+                <!-- PAINEL LATERAL (se quiser usar depois) -->
+                <AnchorPane/>
+
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

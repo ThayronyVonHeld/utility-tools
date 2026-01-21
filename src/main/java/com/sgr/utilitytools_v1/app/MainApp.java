@@ -5,20 +5,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class MainApp extends Application {
 
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+    @Override
+    public void start(Stage stage) throws Exception {
+
+        var url = MainApp.class.getResource(
+                "/com/sgr/utilitytools_v1/dashboard/dashboard.fxml"
+        );
+
+        System.out.println("FXML URL = " + url);
+
+        FXMLLoader loader = new FXMLLoader(url);
+        Scene scene = new Scene(loader.load());
+
         stage.setScene(scene);
+        stage.setTitle("Utility Tools");
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
-
