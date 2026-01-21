@@ -1,4 +1,4 @@
-package com.sgr.utilitytools_v1;
+package com.sgr.utilitytools_v1.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
-    @Override
+public class MainApp extends Application {
+
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
@@ -21,3 +21,4 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+
