@@ -10,7 +10,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage mainStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/com/sgr/utilitytools_v1/view/main/main.fxml"));
+                getClass().getResource("/com/sgr/utilitytools_v1/main/main.fxml"));
 
         Parent root = loader.load();
 
