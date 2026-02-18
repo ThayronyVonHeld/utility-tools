@@ -1,38 +1,13 @@
-.white-background{
-    -fx-background-color: #F7F8FC;
-}
-
 .bottonTransparent{
    -fx-background-color: transparent;
-    -fx-font-size: 16px;
-    -fx-text-fill: #505050;
     -fx-cursor: hand;
-
 }
 
-.barraLateral-background{
-    -fx-background-color:#e2e6ea;
-}
-
-.selecionado{
-    -fx-background-color:#2187dd;
-}
 
 .mouse-moved:hover{
     -fx-background-color: #51a5ec;
 }
 
-.menu-button:hover {
-    -fx-background-color: #3d8df2;
-    -fx-text-fill: white;
-}
-
-.cronometro-box{
--fx-background-radius: 100%;
--fx-border-radius:100%;
--fx-border-width:5px;
-}
-
-.teste{
--fx-background-color: #00A2D3;
+.sideBar-color{
+-fx-background-color: #4680BF;
 }
