@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,136 +9,277 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1024.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1030.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
+   <left>
+      <AnchorPane prefHeight="548.0" prefWidth="213.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="632.0" prefWidth="57.0">
+            <AnchorPane fx:id="pane1" prefHeight="548.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pane2" prefHeight="548.0" prefWidth="142.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox prefHeight="61.0" prefWidth="57.0">
+                  <VBox layoutX="3.0" prefHeight="535.0" prefWidth="164.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Dashboard">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
                            <styleClass>
                               <String fx:value="bottonTransparent" />
                               <String fx:value="mouse-moved" />
                            </styleClass>
-                           <graphic>
-                              <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/269376_menu-icon%20(1).png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Cofre de Senhas">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Documentos CT">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Ramais e Telefones">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Calendario">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Relogio">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Folha de Ponto">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="SGR Intranet">
+                           <font>
+                              <Font name="Times New Roman" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
                         </Button>
                      </children>
                   </VBox>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/DashBoard.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Cofre-Senhas.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Documents-Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/ramais.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Clock.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/calendar-icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Intranet.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/FolhaPonto.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                  </Button>
                </children>
-            </VBox>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane prefHeight="537.0" prefWidth="60.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="522.0" prefWidth="62.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/DashBoard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/Cofre-Senhas.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/Documents-Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/ramais.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/calendar-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/Clock.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/FolhaPonto.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/Intranet.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </AnchorPane>
          </children>
-      </HBox>
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="52.0" prefWidth="1030.0" stylesheets="@main.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="215.0" layoutY="-19.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#menu" prefHeight="0.0" prefWidth="0.0">
+                     <styleClass>
+                        <String fx:value="bottonTransparent" />
+                        <String fx:value="mouse-moved" />
+                     </styleClass>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/menu-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox prefHeight="61.0" prefWidth="884.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0">
+                           <graphic>
+                              <ImageView fitHeight="11.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/window_minimize_icon_198334.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-movedGeneral" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/stop_icon_149180.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-movedGeneral" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#exit" prefHeight="38.0" prefWidth="39.0">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="mouse-movedclose">
+                                 <image>
+                                    <Image url="@../Image/close_delete_remove_cross_icon_149505.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-movedclose" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

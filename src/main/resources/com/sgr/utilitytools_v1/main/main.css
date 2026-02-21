@@ -8,6 +8,13 @@
     -fx-background-color: #51a5ec;
 }
 
-.sideBar-color{
--fx-background-color: #4680BF;
+.barraLateral-background{
+    -fx-background-color:#ADD8E6; //Light Blue
+}
+
+.mouse-movedclose:hover{
+    -fx-background-color: red;
+}
+.mouse-movedGeneral:hover{
+    -fx-background-color: Light-gray;
 }
