@@ -16,6 +16,7 @@ public class MainApp extends Application {
 
         mainStage.setScene(new Scene(root, 1024, 600));
         mainStage.setTitle("Utility Tools");
+        mainStage.setResizable(true);
         mainStage.show();
     }
 

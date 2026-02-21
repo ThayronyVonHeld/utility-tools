@@ -1,6 +1,6 @@
 package com.sgr.utilitytools_v1.app;
 
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -12,37 +12,44 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML
-    private AnchorPane pane2; // área dos textos
+    private AnchorPane sidebarContainer;
 
     private boolean menuAberto = true;
 
-    private static final double MENU_WIDTH = 180;
+    private static final double EXPANDED_WIDTH = 202;
+    private static final double COLLAPSED_WIDTH = 60;
+
+    @FXML
+    private AnchorPane pane2;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // começa aberto (porque visualmente já está)
-        pane2.setTranslateX(0);
     }
 
     @FXML
     private void menu() {
 
-        TranslateTransition transition = new TranslateTransition(Duration.millis(250), pane2);
+        double targetWidth = menuAberto ? COLLAPSED_WIDTH : EXPANDED_WIDTH;
 
-        if (menuAberto) {
-            // FECHAR (retrai os textos)
-            transition.setToX(-MENU_WIDTH);
-        } else {
-            // ABRIR
-            transition.setToX(0);
-        }
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.millis(250),
+                        new KeyValue(sidebarContainer.prefWidthProperty(), targetWidth)
+                )
+        );
 
-        transition.play();
+        timeline.play();
         menuAberto = !menuAberto;
+
+        FadeTransition fade = new FadeTransition(Duration.millis(300), pane2);
+        fade.setToValue(!menuAberto ? 0 : 1);
+        fade.play();
     }
+
 
     @FXML
     private void exit() {
         System.exit(0);
     }
+
 }

@@ -9,16 +9,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Label?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1030.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
+<BorderPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
    <left>
-      <AnchorPane prefHeight="548.0" prefWidth="213.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="sidebarContainer" prefHeight="548.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="pane1" prefHeight="548.0" prefWidth="236.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0" />
-            <AnchorPane fx:id="pane2" prefHeight="548.0" prefWidth="142.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="-23.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="pane1" prefHeight="548.0" prefWidth="209.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pane2" prefHeight="548.0" prefWidth="184.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox layoutX="3.0" prefHeight="535.0" prefWidth="164.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox layoutX="3.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Dashboard">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="160.0" text="Dashboard">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -27,7 +27,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Cofre de Senhas">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Cofre de Senhas">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -36,7 +37,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Documentos CT">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Documentos CT">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -45,7 +47,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Ramais e Telefones">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Ramais e Telefones">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -54,7 +57,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Calendario">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Calendario">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -63,7 +67,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Relogio">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Relogio">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -72,7 +77,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="Folha de Ponto">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Folha de Ponto">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -81,7 +87,8 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="160.0" text="SGR Intranet">
+                        <Separator prefWidth="200.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="160.0" text="SGR Intranet">
                            <font>
                               <Font name="Times New Roman" size="17.0" />
                            </font>
@@ -94,12 +101,12 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets top="20.0" />
+                  <Insets top="10.0" />
                </padding>
             </AnchorPane>
             <AnchorPane prefHeight="537.0" prefWidth="60.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox prefHeight="522.0" prefWidth="62.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
@@ -114,6 +121,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -127,6 +135,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -140,6 +149,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -153,6 +163,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -166,6 +177,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -179,6 +191,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -192,6 +205,7 @@
                               <String fx:value="mouse-moved" />
                            </styleClass>
                         </Button>
+                        <Separator prefWidth="200.0" />
                         <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -209,7 +223,7 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets top="20.0" />
+                  <Insets top="10.0" />
                </padding>
             </AnchorPane>
          </children>
@@ -218,23 +232,27 @@
    <top>
       <AnchorPane prefHeight="52.0" prefWidth="1030.0" stylesheets="@main.css" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="215.0" layoutY="-19.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
+            <HBox layoutX="215.0" layoutY="-19.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#menu" prefHeight="0.0" prefWidth="0.0">
-                     <styleClass>
-                        <String fx:value="bottonTransparent" />
-                        <String fx:value="mouse-moved" />
-                     </styleClass>
-                     <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/menu-icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <HBox prefHeight="61.0" prefWidth="884.0" />
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <HBox>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#menu" prefHeight="0.0" prefWidth="0.0">
+                           <styleClass>
+                              <String fx:value="bottonTransparent" />
+                              <String fx:value="mouse-moved" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/menu-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children></HBox>
+                  <Pane prefHeight="0.0" prefWidth="912.0" />
+                  <HBox prefHeight="0.0" prefWidth="0.0">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0">
                            <graphic>
@@ -282,4 +300,21 @@
          </children>
       </AnchorPane>
    </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="16.0" layoutY="156.0" prefHeight="65.0" prefWidth="129.0" text="Teste">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="50.0" prefHeight="17.0" prefWidth="54.0" text="Teste" />
+            <Label layoutX="16.0" layoutY="99.0" prefHeight="32.0" prefWidth="54.0" text="Teste">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>
