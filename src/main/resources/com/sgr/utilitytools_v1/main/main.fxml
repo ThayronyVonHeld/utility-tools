@@ -158,7 +158,7 @@
                <!-- Continue os demais -->
    
             </VBox>
-            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ADD8E6;" />
+            <Separator orientation="VERTICAL" prefHeight="130.0" prefWidth="0.0" style="-fx-background-color: #ADD8E6;" />
             <Pane prefHeight="434.0" prefWidth="15.0">
                <children>
                   <Button fx:id="btnSeta" layoutX="-9.0" layoutY="167.0" mnemonicParsing="false" onAction="#menu" prefHeight="34.0" prefWidth="33.0" styleClass="bottonTransparent" text="&lt;">
@@ -178,38 +178,34 @@
 
    <!-- ================= TOP BAR ================= -->
    <top>
-      <HBox alignment="CENTER_LEFT" prefHeight="50" prefWidth="0.0" spacing="10" styleClass="top-bar">
+      <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="802.0" spacing="10" styleClass="top-bar">
 
          <padding>
             <Insets left="10" right="10" />
          </padding>
          <children>
    
-            <Button styleClass="bottonTransparent, mouse-moved">
-               <graphic>
-                  <ImageView fitHeight="28" fitWidth="28" preserveRatio="true">
-                     <image>
-                        <Image url="@../Image/menu-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <HBox prefHeight="50.0" prefWidth="634.0">
-               <children>
-                  <Separator orientation="VERTICAL" prefHeight="200.0" />
-               </children>
-            </HBox>
-   
             <HBox prefHeight="0.0" prefWidth="0.0" spacing="5">
       <children>
-                  <Button styleClass="bottonTransparent, mouse-movedGeneral" />
-                  <Button styleClass="bottonTransparent, mouse-movedGeneral" />
+                  <Button prefHeight="30.0" prefWidth="17.0" styleClass="bottonTransparent, mouse-movedGeneral" text="-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button styleClass="bottonTransparent, mouse-movedGeneral" text="o">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
                   <Button onAction="#exit" prefHeight="22.0" prefWidth="20.0" style="-: ;" styleClass="bottonTransparent, mouse-movedclose" text="X">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
       </children>
+               <HBox.margin>
+                  <Insets left="675.0" />
+               </HBox.margin>
             </HBox>
          </children>
 
