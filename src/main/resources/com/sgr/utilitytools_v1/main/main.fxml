@@ -1,320 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
+<BorderPane prefHeight="484.0" prefWidth="802.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
+
+   <!-- ================= SIDEBAR ================= -->
    <left>
-      <AnchorPane fx:id="sidebarContainer" prefHeight="548.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="sidebarContainer" prefHeight="434.0" prefWidth="216.0" styleClass="side-bar">
          <children>
-            <AnchorPane fx:id="pane1" prefHeight="548.0" prefWidth="209.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0" />
-            <AnchorPane fx:id="pane2" prefHeight="548.0" prefWidth="184.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <VBox layoutX="3.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="160.0" text="Dashboard">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Cofre de Senhas">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Documentos CT">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Ramais e Telefones">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Calendario">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Relogio">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Folha de Ponto">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="160.0" text="SGR Intranet">
-                           <font>
-                              <Font name="Times New Roman" size="17.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                     </children>
-                  </VBox>
-               </children>
+   
+            <!-- ÍCONES FIXOS -->
+            <VBox alignment="TOP_CENTER" prefWidth="60.0" spacing="2.0" styleClass="barraLateral-background">
                <padding>
-                  <Insets top="10.0" />
+                  <Insets top="10" />
                </padding>
-            </AnchorPane>
-            <AnchorPane prefHeight="537.0" prefWidth="60.0" styleClass="barraLateral-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <VBox spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/DashBoard.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/Cofre-Senhas.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/Documents-Icon.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/ramais.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/calendar-icon.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/Clock.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/FolhaPonto.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/Intranet.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                        </Button>
-                     </children>
-                  </VBox>
-               </children>
+      <children>
+      
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/DashBoard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Cofre-Senhas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Documents-Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/calendar-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Clock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Intranet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/pontoicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+      </children>
+   
+               <!-- Repita os botões de ícone aqui -->
+   
+            </VBox>
+   
+            <!-- TEXTOS COLAPSÁVEIS -->
+            <VBox fx:id="textMenu" fillWidth="true" prefHeight="398.0" prefWidth="149.0" spacing="3.0" styleClass="barraLateral-background" VBox.vgrow="ALWAYS">
+   
                <padding>
-                  <Insets top="10.0" />
+                  <Insets top="12.0" />
                </padding>
-            </AnchorPane>
+      <children>
+      
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Dashboard">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+      
+                  <Separator />
+      
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Cofre de Senhas">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+      
+                  <Separator />
+      
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Documentos CT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator />
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Agenda">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator />
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Relogio">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator />
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Folha de Ponto">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator />
+                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="SGR Intranet">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+      </children>
+   
+               <!-- Continue os demais -->
+   
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ADD8E6;" />
+            <Pane prefHeight="434.0" prefWidth="15.0">
+               <children>
+                  <Button fx:id="btnSeta" layoutX="-9.0" layoutY="167.0" mnemonicParsing="false" onAction="#menu" prefHeight="34.0" prefWidth="33.0" styleClass="bottonTransparent" text="&lt;">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
          </children>
-      </AnchorPane>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </BorderPane.margin>
+
+      </HBox>
    </left>
+
+   <!-- ================= TOP BAR ================= -->
    <top>
-      <AnchorPane prefHeight="52.0" prefWidth="1030.0" stylesheets="@main.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_LEFT" prefHeight="50" prefWidth="0.0" spacing="10" styleClass="top-bar">
+
+         <padding>
+            <Insets left="10" right="10" />
+         </padding>
          <children>
-            <HBox layoutX="215.0" layoutY="-19.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
+   
+            <Button styleClass="bottonTransparent, mouse-moved">
+               <graphic>
+                  <ImageView fitHeight="28" fitWidth="28" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/menu-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <HBox prefHeight="50.0" prefWidth="634.0">
                <children>
                   <Separator orientation="VERTICAL" prefHeight="200.0" />
-                  <HBox>
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#menu" prefHeight="0.0" prefWidth="0.0">
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-moved" />
-                           </styleClass>
-                           <graphic>
-                              <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/menu-icon.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children></HBox>
-                  <Pane prefHeight="0.0" prefWidth="912.0" />
-                  <HBox prefHeight="0.0" prefWidth="0.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0">
-                           <graphic>
-                              <ImageView fitHeight="11.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/window_minimize_icon_198334.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-movedGeneral" />
-                           </styleClass>
-                        </Button>
-                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="39.0">
-                           <graphic>
-                              <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Image/stop_icon_149180.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-movedGeneral" />
-                           </styleClass>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#exit" prefHeight="38.0" prefWidth="39.0">
-                           <graphic>
-                              <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="mouse-movedclose">
-                                 <image>
-                                    <Image url="@../Image/close_delete_remove_cross_icon_149505.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <styleClass>
-                              <String fx:value="bottonTransparent" />
-                              <String fx:value="mouse-movedclose" />
-                           </styleClass>
-                        </Button>
-                     </children>
-                  </HBox>
                </children>
             </HBox>
+   
+            <HBox prefHeight="0.0" prefWidth="0.0" spacing="5">
+      <children>
+                  <Button styleClass="bottonTransparent, mouse-movedGeneral" />
+                  <Button styleClass="bottonTransparent, mouse-movedGeneral" />
+                  <Button onAction="#exit" prefHeight="22.0" prefWidth="20.0" style="-: ;" styleClass="bottonTransparent, mouse-movedclose" text="X">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+      </children>
+            </HBox>
          </children>
-      </AnchorPane>
+
+      </HBox>
    </top>
+
+   <!-- ================= CENTER ================= -->
    <center>
-      <AnchorPane BorderPane.alignment="CENTER">
+      <StackPane>
          <children>
-            <Label layoutX="16.0" layoutY="156.0" prefHeight="65.0" prefWidth="129.0" text="Teste">
-               <font>
-                  <Font size="44.0" />
-               </font>
-            </Label>
-            <Label layoutX="16.0" layoutY="50.0" prefHeight="17.0" prefWidth="54.0" text="Teste" />
-            <Label layoutX="16.0" layoutY="99.0" prefHeight="32.0" prefWidth="54.0" text="Teste">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
+            <Label style="-fx-font-size: 32px;" text="Área Central" />
          </children>
-      </AnchorPane>
+      </StackPane>
    </center>
+
 </BorderPane>

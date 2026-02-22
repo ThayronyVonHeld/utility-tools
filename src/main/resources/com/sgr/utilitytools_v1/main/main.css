@@ -18,3 +18,10 @@
 .mouse-movedGeneral:hover{
     -fx-background-color: Light-gray;
 }
+
+.side-bar {
+    -fx-background-color:#ADD8E6;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 8 15 8 15;
+}

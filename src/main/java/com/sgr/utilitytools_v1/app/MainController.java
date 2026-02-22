@@ -3,7 +3,10 @@ package com.sgr.utilitytools_v1.app;
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -11,21 +14,24 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
-    @FXML
-    private AnchorPane sidebarContainer;
-
-    private boolean menuAberto = true;
-
-    private static final double EXPANDED_WIDTH = 202;
-    private static final double COLLAPSED_WIDTH = 60;
-
-    @FXML
-    private AnchorPane pane2;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // começa aberto (porque visualmente já está)
     }
+
+    @FXML
+    private HBox sidebarContainer;
+
+    @FXML
+    private VBox textMenu;
+
+    @FXML
+    private Button btnSeta;
+
+    private boolean menuAberto = true;
+
+    private static final double EXPANDED_WIDTH = 220;
+    private static final double COLLAPSED_WIDTH = 60;
 
     @FXML
     private void menu() {
@@ -39,11 +45,18 @@ public class MainController implements Initializable {
         );
 
         timeline.play();
+
+        textMenu.setVisible(!menuAberto);
+        textMenu.setManaged(!menuAberto);
+
         menuAberto = !menuAberto;
 
-        FadeTransition fade = new FadeTransition(Duration.millis(300), pane2);
-        fade.setToValue(!menuAberto ? 0 : 1);
-        fade.play();
+        if (menuAberto) {
+            btnSeta.setText("<");
+        } else {
+            btnSeta.setText(">");
+        }
+
     }
 
 
