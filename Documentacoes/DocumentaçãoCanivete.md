@@ -68,8 +68,68 @@ Primeiro, reorganizei o projeto em camadas para entender melhor onde cada funç�
 Em seguida, passei a utilizar o padrão MVC, que se encaixou perfeitamente no projeto. A estrutura ficou da seguinte forma:
 
 ```
-(estrutura mantida exatamente como você escreveu)
+src
+└── main
+├── java
+│   └── com.sgr.utilitytools_v1
+│       ├── app
+│       │   ├── MainApp.java
+│       │   └── MainController.java
+│       │
+│       ├── clock
+│       │   ├── ClockController.java
+│       │   ├── ClockNavigator.java
+│       │   │
+│       │   ├── alarm
+│       │   │   ├── Alarm.java
+│       │   │   ├── AlarmController.java
+│       │   │   └── AlarmService.java
+│       │   │
+│       │   ├── stopwatch
+│       │   │   └── (classes futuras)
+│       │   │
+│       │   └── timer
+│       │       └── (classes futuras)
+│       │
+│       ├── dashboard
+│       │   ├── DashboardController.java
+│       │   └── DashboardService.java
+│       │
+│       ├── navigation
+│       │   └── (navegação global)
+│       │
+│       └── module-info.java
+│
+└── resources
+└── com.sgr.utilitytools_v1
+├── calendar
+│   ├── calendar.fxml
+│   └── calendar.css
+│
+├── clock
+│   ├── Clock.fxml
+│   │
+│   ├── alarm
+│   │   ├── alarm.fxml
+│   │   └── alarm.css
+│   │
+│   ├── stopwatch
+│   │   └── (FXML/CSS futuros)
+│   │
+│   └── timer
+│       └── (FXML/CSS futuros)
+│
+├── dashboard
+│   ├── dashboard.fxml
+│   └── dashboard.css
+│
+├── documents
+│
+├── main
+│
+└── passwordsafe
 ```
+
 
 Resumidamente, assim ficou o projeto.
 
