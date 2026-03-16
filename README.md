@@ -2,7 +2,7 @@
 
 Aplicação desktop desenvolvida para **centralizar ferramentas operacionais e informações técnicas em um único ambiente**, funcionando como um hub de utilidades para rotinas técnicas.
 
-O objetivo do projeto é reunir funcionalidades utilizadas no dia a dia de operações técnicas — como organização de tarefas, armazenamento de documentos e acesso rápido a informações importantes — em uma interface única.
+O objetivo do projeto é reunir funcionalidades utilizadas no dia a dia de operações técnicas como organização de tarefas, armazenamento de documentos e acesso rápido a informações importantes em uma interface única.
 
 > ⚠️ O projeto encontra-se em desenvolvimento.
 
