@@ -18,8 +18,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
-    @FXML private HBox sidebarContainer;
-    @FXML private VBox textMenu;
+    @FXML private VBox sidebarContainer;
     @FXML private Button btnSeta;
     @FXML private StackPane mainPane;
 
@@ -38,7 +37,7 @@ public class MainController implements Initializable {
         Navigator.loadView("/com/sgr/utilitytools_v1/dashboard/dashboard.fxml");
 
         // 🔹 Guarda os textos originais dos botões
-        for (Node node : textMenu.getChildren()) {
+        for (Node node : sidebarContainer.getChildren()) {
             if (node instanceof Button btn) {
                 buttonTexts.put(btn, btn.getText());
             }
@@ -57,7 +56,7 @@ public class MainController implements Initializable {
 
         timeline.play();
 
-        for (Node node : textMenu.getChildren()) {
+        for (Node node : sidebarContainer.getChildren()) {
             if (node instanceof Button btn) {
 
                 if (menuOpen) {

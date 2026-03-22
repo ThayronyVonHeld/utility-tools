@@ -3,7 +3,6 @@
     -fx-cursor: hand;
 }
 
-
 .mouse-moved:hover{
     -fx-background-color: #51a5ec;
 }
