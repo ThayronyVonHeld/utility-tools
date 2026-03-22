@@ -1,188 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane prefHeight="484.0" prefWidth="802.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
+<BorderPane prefHeight="609.0" prefWidth="989.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.app.MainController">
 
-   <!-- ================= SIDEBAR ================= -->
    <left>
       <HBox fx:id="sidebarContainer" prefHeight="434.0" prefWidth="216.0" styleClass="side-bar">
          <children>
-   
-            <!-- ÍCONES FIXOS -->
-            <VBox alignment="TOP_CENTER" prefWidth="60.0" spacing="2.0" styleClass="barraLateral-background">
+            <VBox alignment="TOP_CENTER" prefHeight="529.0" prefWidth="194.0" spacing="2.0" styleClass="barraLateral-background">
                <padding>
                   <Insets top="10" />
                </padding>
       <children>
       
-                  <Button onAction="#openDashboard" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openDashboard" prefHeight="41.0" styleClass="bottonTransparent, mouse-moved" text="Dashboard">
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/DashBoard.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-home" iconSize="15" text="" />
                      </graphic>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button onAction="#openSafe" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openSafe" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Cofre de Senhas">
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Cofre-Senhas.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-lock" iconSize="15" />
                      </graphic>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button onAction="#openDocuments" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openDocuments" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Documentos CT">
                      <graphic>
-                        <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Documents-Icon.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-book" iconSize="15" />
                      </graphic>
                   </Button>
                   <Separator prefWidth="200.0" />
-          <Button onAction="#openPhoneContacts" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
-              <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                      <image>
-                          <Image url="@../Image/ramais-icon.png" />
-                      </image>
-                  </ImageView>
-              </graphic>
+          <Button maxWidth="186.0" onAction="#openPhoneContacts" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Contatos e Ramais">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-phone" iconSize="15" />
+                     </graphic>
           </Button>
           <Separator prefWidth="200.0" />
-          <Button onAction="#openClock" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
-              <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                      <image>
-                          <Image url="@../Image/Clock.png" />
-                      </image>
-                  </ImageView>
-              </graphic>
+          <Button maxWidth="186.0" onAction="#openClock" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Relogio">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-bell" iconSize="15" />
+                     </graphic>
           </Button>
           <Separator prefWidth="200.0" />
-                  <Button onAction="#openCalendar" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openCalendar" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Calendario">
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/calendar-icon.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-calendar" iconSize="15" />
                      </graphic>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button onAction="#openTimeSheet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openTimeSheet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Intranet">
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/Intranet.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-briefcase" iconSize="15" />
                      </graphic>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button onAction="#openIntranet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved">
+                  <Button maxWidth="186.0" onAction="#openIntranet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Folha de Ponto">
                      <graphic>
-                        <ImageView fx:id="btnIntranet" fitHeight="38.0" fitWidth="33.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/pontoicon.png" />
-                           </image>
-                        </ImageView>
+                        <FontIcon iconLiteral="fas-id-card" iconSize="15" />
                      </graphic>
                   </Button>
       </children>
 
    
             </VBox>
-   
-
-            <VBox fx:id="textMenu" fillWidth="true" prefHeight="398.0" prefWidth="149.0" spacing="3.0" styleClass="barraLateral-background" VBox.vgrow="ALWAYS">
-   
-               <padding>
-                  <Insets top="12.0" />
-               </padding>
-      <children>
-      
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openDashboard" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Dashboard">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-      
-                  <Separator />
-      
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openSafe" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Cofre de Senhas">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-      
-                  <Separator />
-      
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openDocuments" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Documentos CT">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Separator />
-          <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openPhoneContacts" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Contatos">
-              <font>
-                  <Font size="15.0" />
-              </font>
-          </Button>
-          <Separator />
-          <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openClock" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Relogio">
-              <font>
-                  <Font size="15.0" />
-              </font>
-          </Button>
-          <Separator />
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openCalendar" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Agenda">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Separator />
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openTimeSheet" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="Folha de Ponto">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <Separator />
-                  <Button alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#openIntranet" prefHeight="39.0" styleClass="bottonTransparent, mouse-moved" text="SGR Intranet">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-      </children>
-   
-               <!-- Continue os demais -->
-   
-            </VBox>
-            <Separator orientation="VERTICAL" prefHeight="130.0" prefWidth="0.0" style="-fx-background-color: #ADD8E6;" />
-            <Pane prefHeight="434.0" prefWidth="15.0">
-               <children>
-                  <Button fx:id="btnSeta" layoutX="-9.0" layoutY="167.0" mnemonicParsing="false" onAction="#menu" prefHeight="34.0" prefWidth="33.0" styleClass="bottonTransparent" text="&lt;">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Button>
-               </children>
-            </Pane>
          </children>
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" top="10.0" />
@@ -191,7 +81,6 @@
       </HBox>
    </left>
 
-   <!-- ================= TOP BAR ================= -->
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="802.0" spacing="10" styleClass="top-bar">
 
@@ -227,7 +116,6 @@
       </HBox>
    </top>
 
-   <!-- ================= CENTER ================= -->
    <center>
       <StackPane fx:id="mainPane">
          <children>
