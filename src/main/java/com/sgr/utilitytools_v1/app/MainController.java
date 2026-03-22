@@ -12,6 +12,8 @@ import javafx.util.Duration;
 
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -32,6 +34,21 @@ public class MainController implements Initializable {
     private static final double EXPANDED_WIDTH = 220;
     private static final double COLLAPSED_WIDTH = 60;
 
+    private final Map<Button, String> buttonTexts = new HashMap<>();
+
+    @FXML
+    public void initialize() {
+        textMenu.getChildren().forEach(node -> {
+            if (node instanceof Button btn) {
+                buttonTexts.put(btn, btn.getText());
+            }
+        });
+    }
+
+    private void restoreButtonText(Button btn) {
+        btn.setText(buttonTexts.get(btn));
+    }
+
     @FXML
     private void menu() {
 
@@ -45,17 +62,23 @@ public class MainController implements Initializable {
 
         timeline.play();
 
-        textMenu.setVisible(!menuOpen);
-        textMenu.setManaged(!menuOpen);
+
+        textMenu.getChildren().forEach(node -> {
+            if (node instanceof Button btn) {
+
+                if (menuOpen) {
+                    // recolhendo → remove texto
+                    btn.setText("");
+                } else {
+                    // expandindo → volta texto
+                    restoreButtonText(btn);
+                }
+            }
+        });
 
         menuOpen = !menuOpen;
 
-        if (menuOpen) {
-            btnSeta.setText("<");
-        } else {
-            btnSeta.setText(">");
-        }
-
+        btnSeta.setText(menuOpen ? "<" : ">");
     }
 
     @FXML

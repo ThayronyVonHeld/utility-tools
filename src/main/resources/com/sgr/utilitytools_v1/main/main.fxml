@@ -16,58 +16,82 @@
    <left>
       <HBox fx:id="sidebarContainer" prefHeight="434.0" prefWidth="216.0" styleClass="side-bar">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="529.0" prefWidth="194.0" spacing="2.0" styleClass="barraLateral-background">
+            <VBox fx:id="textMenu" alignment="TOP_CENTER" prefHeight="529.0" prefWidth="194.0" spacing="2.0" styleClass="barraLateral-background">
                <padding>
                   <Insets top="10" />
                </padding>
       <children>
       
-                  <Button maxWidth="186.0" onAction="#openDashboard" prefHeight="41.0" styleClass="bottonTransparent, mouse-moved" text="Dashboard">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openDashboard" prefHeight="41.0" styleClass="bottonTransparent, mouse-moved" text="Dashboard">
                      <graphic>
-                        <FontIcon iconLiteral="fas-home" iconSize="15" text="" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-home" iconSize="15" selectionEnd="1" selectionStart="1" text="" />
                      </graphic>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button maxWidth="186.0" onAction="#openSafe" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Cofre de Senhas">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openSafe" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Cofre de Senhas">
                      <graphic>
-                        <FontIcon iconLiteral="fas-lock" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-lock" iconSize="15" />
                      </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="17.0" />
+                     </padding>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button maxWidth="186.0" onAction="#openDocuments" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Documentos CT">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openDocuments" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Documentos CT">
                      <graphic>
-                        <FontIcon iconLiteral="fas-book" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-book" iconSize="15" />
                      </graphic>
+                     <padding>
+                        <Insets right="17.0" />
+                     </padding>
                   </Button>
                   <Separator prefWidth="200.0" />
-          <Button maxWidth="186.0" onAction="#openPhoneContacts" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Contatos e Ramais">
+          <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openPhoneContacts" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Contatos e Ramais">
                      <graphic>
-                        <FontIcon iconLiteral="fas-phone" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-phone" iconSize="15" />
                      </graphic>
           </Button>
           <Separator prefWidth="200.0" />
-          <Button maxWidth="186.0" onAction="#openClock" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Relogio">
+          <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openClock" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Relogio">
                      <graphic>
-                        <FontIcon iconLiteral="fas-bell" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-bell" iconSize="15" />
                      </graphic>
+                     <padding>
+                        <Insets right="57.0" />
+                     </padding>
           </Button>
           <Separator prefWidth="200.0" />
-                  <Button maxWidth="186.0" onAction="#openCalendar" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Calendario">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openCalendar" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Calendario">
                      <graphic>
-                        <FontIcon iconLiteral="fas-calendar" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-calendar" iconSize="15" />
                      </graphic>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button maxWidth="186.0" onAction="#openTimeSheet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Intranet">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openTimeSheet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Intranet">
                      <graphic>
-                        <FontIcon iconLiteral="fas-briefcase" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-briefcase" iconSize="15" />
                      </graphic>
+                     <padding>
+                        <Insets right="55.0" />
+                     </padding>
                   </Button>
                   <Separator prefWidth="200.0" />
-                  <Button maxWidth="186.0" onAction="#openIntranet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Folha de Ponto">
+                  <Button graphicTextGap="20.0" maxWidth="186.0" onAction="#openIntranet" prefHeight="38.0" styleClass="bottonTransparent, mouse-moved" text="Folha de Ponto">
                      <graphic>
-                        <FontIcon iconLiteral="fas-id-card" iconSize="15" />
+                        <FontIcon iconColor="#464545" iconLiteral="fas-id-card" iconSize="15" />
                      </graphic>
+                     <padding>
+                        <Insets right="17.0" />
+                     </padding>
                   </Button>
       </children>
 
@@ -88,6 +112,7 @@
             <Insets left="10" right="10" />
          </padding>
          <children>
+            <Button fx:id="btnSeta" mnemonicParsing="false" prefHeight="23.0" prefWidth="32.0" text="&lt;" />
    
             <HBox prefHeight="0.0" prefWidth="0.0" spacing="5">
       <children>
@@ -115,7 +140,6 @@
 
       </HBox>
    </top>
-
    <center>
       <StackPane fx:id="mainPane">
          <children>
