@@ -4,6 +4,7 @@ import com.sgr.utilitytools_v1.navigation.Navigator;
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -17,13 +18,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Navigator.setMainPane(mainPane);
-        Navigator.loadView("/com/sgr/utilitytools_v1/dashboard/dashboard.fxml");
-    }
-
     @FXML private HBox sidebarContainer;
     @FXML private VBox textMenu;
     @FXML private Button btnSeta;
@@ -36,21 +30,22 @@ public class MainController implements Initializable {
 
     private final Map<Button, String> buttonTexts = new HashMap<>();
 
-    @FXML
-    public void initialize() {
-        textMenu.getChildren().forEach(node -> {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        // 🔹 Configuração inicial do sistema
+        Navigator.setMainPane(mainPane);
+        Navigator.loadView("/com/sgr/utilitytools_v1/dashboard/dashboard.fxml");
+
+        // 🔹 Guarda os textos originais dos botões
+        for (Node node : textMenu.getChildren()) {
             if (node instanceof Button btn) {
                 buttonTexts.put(btn, btn.getText());
             }
-        });
+        }
     }
 
-    private void restoreButtonText(Button btn) {
-        btn.setText(buttonTexts.get(btn));
-    }
-
-    @FXML
-    private void menu() {
+    @FXML private void menu() {
 
         double targetWidth = menuOpen ? COLLAPSED_WIDTH : EXPANDED_WIDTH;
 
@@ -62,19 +57,18 @@ public class MainController implements Initializable {
 
         timeline.play();
 
-
-        textMenu.getChildren().forEach(node -> {
+        for (Node node : textMenu.getChildren()) {
             if (node instanceof Button btn) {
 
                 if (menuOpen) {
-                    // recolhendo → remove texto
-                    btn.setText("");
+                    btn.setText(""); // recolhe
+                    btn.setGraphicTextGap(0); // evita espaço estranho
                 } else {
-                    // expandindo → volta texto
-                    restoreButtonText(btn);
+                    btn.setText(buttonTexts.get(btn)); // expande
+                    btn.setGraphicTextGap(20);
                 }
             }
-        });
+        }
 
         menuOpen = !menuOpen;
 
