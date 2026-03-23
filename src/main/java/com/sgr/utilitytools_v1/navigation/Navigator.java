@@ -2,7 +2,6 @@ package com.sgr.utilitytools_v1.navigation;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 public class Navigator {
