@@ -1,5 +1,6 @@
 package com.sgr.utilitytools_v1.clock.timer;
 
+
 public class Timer {
     private int totalSeconds;
     private int remainingSeconds;

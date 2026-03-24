@@ -1,5 +1,6 @@
 package com.sgr.utilitytools_v1.clock.timer;
 
+import com.sgr.utilitytools_v1.clock.ClockService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Arc;
@@ -12,24 +13,33 @@ public class TimerController {
 
     @FXML
     public void initialize() {
-        // Listener para atualizar a tela sempre que o tempo mudar no service
-        service.remainingSecondsProperty().addListener((obs, old, newVal) -> {
-            updateUI(newVal.intValue());
+        // Atualiza a cada 10ms para o arco se mover suavemente
+        ClockService.getInstance().tickProperty().addListener((obs, old, newVal) -> {
+            updateUI();
         });
-
-        // Update inicial para não começar zerado
-        updateUI(service.remainingSecondsProperty().get());
+        updateUI();
     }
 
-    private void updateUI(int remaining) {
+    private void updateUI() {
+        int remaining = service.getRemainingSeconds();
+
+        // Formata o texto
         int h = remaining / 3600;
         int m = (remaining % 3600) / 60;
         int s = remaining % 60;
         timeLabel.setText(String.format("%02d:%02d:%02d", h, m, s));
 
-        if (service.getTotalSeconds() > 0) {
-            double progress = (double) remaining / service.getTotalSeconds();
+        // Animação suave do arco
+        if (service.isRunning()) {
+            bgArc.setLength(360 * service.getPreciseProgress());
+        } else {
+            double progress = service.getTotalSeconds() > 0 ?
+                    (double) remaining / service.getTotalSeconds() : 0;
             bgArc.setLength(360 * progress);
         }
     }
+
+    @FXML private void handlePlay() { service.start(); }
+    @FXML private void handleStop() { service.pause(); }
+    @FXML private void handleReset() { service.reset(); updateUI(); }
 }
