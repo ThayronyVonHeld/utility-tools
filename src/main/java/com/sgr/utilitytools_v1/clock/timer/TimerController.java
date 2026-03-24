@@ -15,12 +15,12 @@ public class TimerController {
     public void initialize() {
         // Atualiza a cada 10ms para o arco se mover suavemente
         ClockService.getInstance().tickProperty().addListener((obs, old, newVal) -> {
-            updateUI();
+            updateLabel();
         });
-        updateUI();
+        updateLabel();
     }
 
-    private void updateUI() {
+    private void updateLabel() {
         int remaining = service.getRemainingSeconds();
 
         // Formata o texto
@@ -41,5 +41,5 @@ public class TimerController {
 
     @FXML private void handlePlay() { service.start(); }
     @FXML private void handleStop() { service.pause(); }
-    @FXML private void handleReset() { service.reset(); updateUI(); }
+    @FXML private void handleReset() { service.reset(); updateLabel(); }
 }
