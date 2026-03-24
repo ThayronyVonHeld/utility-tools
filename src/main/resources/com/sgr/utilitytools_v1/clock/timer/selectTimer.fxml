@@ -82,7 +82,7 @@
             </HBox>
             <HBox layoutX="167.0" layoutY="100.0" prefHeight="100.0" prefWidth="267.0">
                <children>
-                  <Label fx:id="lblHoras" text="00">
+                  <Label fx:id="lblHoras" onScroll="#btnHmais" text="00">
                      <font>
                         <Font size="70.0" />
                      </font>
