@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 
-public class SelectTimerController {
+public class SelectTimer {
 
     @FXML private Label lblHoras;
     @FXML private Label lblMinutos;
