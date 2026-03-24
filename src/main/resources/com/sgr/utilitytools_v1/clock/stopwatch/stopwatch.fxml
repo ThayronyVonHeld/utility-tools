@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.sgr.utilitytools_v1.clock.stopwatch.StopwatchController"
-            prefHeight="400.0" prefWidth="600.0" >
 
-</AnchorPane>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.clock.stopwatch.StopwatchController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Label fx:id="lblTimer" layoutX="168.0" layoutY="80.0" text="00:00:00.000">
+                    <font>
+                        <Font size="49.0" />
+                    </font>
+                </Label>
+                <Button fx:id="startPause" layoutX="359.0" layoutY="177.0" mnemonicParsing="false" onAction="#startStopwatch" text="start" />
+                <Button fx:id="lapReset" layoutX="182.0" layoutY="177.0" mnemonicParsing="false" onAction="#lapReset" text="Lap" />
+                <HBox fx:id="painel" layoutY="276.0" prefHeight="154.0" prefWidth="606.0">
+                    <children>
+                        <AnchorPane prefHeight="167.0" prefWidth="143.0" />
+                        <ListView fx:id="listLap" prefHeight="166.0" prefWidth="365.0" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
+

@@ -6,12 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-
-
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,11 +29,9 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        // 🔹 Configuração inicial do sistema
         Navigator.setMainPane(mainPane);
         Navigator.loadView("/com/sgr/utilitytools_v1/dashboard/dashboard.fxml");
 
-        // 🔹 Guarda os textos originais dos botões
         for (Node node : sidebarContainer.getChildren()) {
             if (node instanceof Button btn) {
                 buttonTexts.put(btn, btn.getText());
