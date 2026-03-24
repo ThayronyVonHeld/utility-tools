@@ -1,6 +1,7 @@
 package com.sgr.utilitytools_v1.clock.stopwatch;
 
 import com.sgr.utilitytools_v1.clock.ClockService;
+import javafx.beans.binding.Bindings;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,63 +17,66 @@ public class StopwatchController {
     @FXML private ListView<String> listLap;
     @FXML private HBox painel;
 
-    private final StopwatchService service = new StopwatchService();
+    private final StopwatchService service = StopwatchService.getInstance();
     private ChangeListener<Number> tickListener;
 
     @FXML
     public void initialize() {
 
-        painel.setVisible(false);
-        painel.setManaged(false);
-        lapReset.setDisable(true);
+        listLap.setItems(service.getLaps()); // Vincula os itens da lista
+
+        StopwatchService service = StopwatchService.getInstance();
+
+        painel.visibleProperty().bind(Bindings.isEmpty(service.getLaps()).not());
+        painel.managedProperty().bind(painel.visibleProperty()); // Vincula a visibilidade do painel
+
+        updateButton(service.isRunning());
+        lblTimer.setText(formatTime(service.getElapsedTime())); // Sincroniza o estado visual inicial
 
         tickListener = (obs, oldVal, newVal) -> {
-            lblTimer.setText(formatTime(service.getElapsedTime()));
+            lblTimer.setText(formatTime(service.getElapsedTime())); // Listener para o tempo
         };
-
         ClockService.getInstance().tickProperty().addListener(tickListener);
     }
 
+
     @FXML
-    private void startStopwatch() {
-
-        lapReset.setDisable(false);
-
+    private void btnStartStop() {
         if (service.isRunning()) {
             service.pause();
-            startPause.setText("Play");
-            lapReset.setText("Reset");
         } else {
             service.start();
-            startPause.setText("Pause");
-            lapReset.setText("Lap");
         }
+        updateButton(service.isRunning());
     }
 
     @FXML
-    public void lapReset() {
-
+    public void btnLapReset() {
         if (service.isRunning()) {
-
-            int lap = service.nextLap();
-
-            listLap.getItems().add(
-                    String.format("Lap %-3d | %s", lap, formatTime(service.getElapsedTime()))
-            );
-
-            painel.setVisible(true);
-            painel.setManaged(true);
-
+            service.nextLap();
         } else {
-
             service.reset();
-
             lblTimer.setText(formatTime(0));
-            listLap.getItems().clear();
-            painel.setVisible(false);
-            painel.setManaged(false);
+        }
+        // ESSENCIAL: Atualiza o estado dos botões após a mudança
+        updateButton(service.isRunning());
+    }
+
+    private void updateButton(boolean isRunning) {
+        if (isRunning) {
+            startPause.setText("Pause");
             lapReset.setText("Lap");
-            lapReset.setDisable(true);
+            lapReset.setDisable(false);
+        } else {
+            startPause.setText("Play");
+
+            if (service.getElapsedTime() > 0) {
+                lapReset.setText("Reset");
+                lapReset.setDisable(false);
+            } else {
+                lapReset.setText("Lap");
+                lapReset.setDisable(true);
+            }
         }
     }
 

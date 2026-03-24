@@ -26,7 +26,7 @@ public class ClockService {
 
     private void setupTimeline() {
         timeline = new Timeline(
-                new KeyFrame(Duration.seconds(1), e -> onTick())
+                new KeyFrame(Duration.millis(10), e -> onTick())
         );
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
@@ -35,10 +35,6 @@ public class ClockService {
     private void onTick() {
         tick.set(tick.get() + 1);
 
-        // 🔥 AQUI VAI O PODER DEPOIS
-        // timerService.update();
-        // stopwatchService.update();
-        // alarmService.check();
     }
 
     public IntegerProperty tickProperty() {

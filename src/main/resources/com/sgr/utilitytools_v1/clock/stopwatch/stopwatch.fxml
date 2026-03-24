@@ -17,8 +17,8 @@
                         <Font size="49.0" />
                     </font>
                 </Label>
-                <Button fx:id="startPause" layoutX="359.0" layoutY="177.0" mnemonicParsing="false" onAction="#startStopwatch" text="start" />
-                <Button fx:id="lapReset" layoutX="182.0" layoutY="177.0" mnemonicParsing="false" onAction="#lapReset" text="Lap" />
+                <Button fx:id="startPause" layoutX="359.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnStartStop" text="start" />
+                <Button fx:id="lapReset" layoutX="182.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnLapReset" text="Lap" />
                 <HBox fx:id="painel" layoutY="276.0" prefHeight="154.0" prefWidth="606.0">
                     <children>
                         <AnchorPane prefHeight="167.0" prefWidth="143.0" />
