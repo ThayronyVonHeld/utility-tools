@@ -5,53 +5,70 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
 public class TimerService {
-    private static TimerService instance;
+
     private final Timer timer = new Timer();
-
-    // Propriedade para a UI observar a contagem regressiva
-    private final IntegerProperty remainingSeconds = new SimpleIntegerProperty(0);
-    private int tickCounter = 0;
-
-    private TimerService() {
-        // Ouve o pulso de 10ms do ClockService
-        ClockService.getInstance().tickProperty().addListener((obs, old, newVal) -> update());
-    }
+    private static TimerService instance;
 
     public static TimerService getInstance() {
-        if (instance == null) instance = new TimerService();
+        if (instance == null) {
+            instance = new TimerService();
+        }
         return instance;
     }
 
-    public void setTime(int h, int m, int s) {
-        int total = (h * 3600) + (m * 60) + s;
-        timer.setTotalSeconds(total);
-        timer.setRemainingSeconds(total);
-        remainingSeconds.set(total);
+    public TimerService() {
+        ClockService.getInstance().tickProperty().addListener((obs, oldVal, newVal) -> {
+            update();
+        });
+    }
+
+    public void setTime(int seconds) {
+        timer.setTotalSeconds(seconds);
+        timer.setRemainingSeconds(seconds);
     }
 
     public void start() {
-        if (remainingSeconds.get() > 0) timer.setRunning(true);
+        if (timer.isRunning()) return;
+        timer.setRunning(true);
     }
 
-    public void pause() { timer.setRunning(false); }
+    public void pause() {
+        timer.setRunning(false);
+    }
+
+    public void reset() {
+        timer.setRemainingSeconds(timer.getTotalSeconds());
+        timer.setRunning(false);
+    }
 
     private void update() {
         if (!timer.isRunning()) return;
 
-        tickCounter++;
-        if (tickCounter >= 100) { // 100 ticks de 10ms = 1 segundo
-            tickCounter = 0;
-            if (remainingSeconds.get() > 0) {
-                remainingSeconds.set(remainingSeconds.get() - 1);
-                timer.setRemainingSeconds(remainingSeconds.get());
-            } else {
-                timer.setRunning(false);
-                // Futuro: Disparar som de alarme aqui
-            }
+        int remaining = timer.getRemainingSeconds() - 1;
+
+        if (remaining <= 0) {
+            timer.setRemainingSeconds(0);
+            timer.setRunning(false);
+            onFinish();
+        } else {
+            timer.setRemainingSeconds(remaining);
         }
     }
 
-    public IntegerProperty remainingSecondsProperty() { return remainingSeconds; }
-    public int getTotalSeconds() { return timer.getTotalSeconds(); }
-    public boolean isRunning() { return timer.isRunning(); }
+    private void onFinish() {
+        System.out.println("⏰ Timer finalizado!");
+        // tocar som depois
+    }
+
+    public int getRemainingSeconds() {
+        return timer.getRemainingSeconds();
+    }
+
+    public int getTotalSeconds() {
+        return timer.getTotalSeconds();
+    }
+
+    public boolean isRunning() {
+        return timer.isRunning();
+    }
 }

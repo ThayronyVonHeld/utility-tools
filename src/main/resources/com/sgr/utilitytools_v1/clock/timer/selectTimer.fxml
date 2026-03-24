@@ -15,7 +15,7 @@
          <children>
             <HBox layoutX="177.0" layoutY="50.0" prefHeight="49.0" prefWidth="223.0" spacing="50.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnHmais" rotate="270.0" text="&gt;">
+                  <Button mnemonicParsing="false" rotate="270.0" text="&gt;">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
@@ -25,7 +25,7 @@
                         <String fx:value="botaoTransparent" />
                      </styleClass>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnMmais" rotate="270.0" text="&gt;">
+                  <Button mnemonicParsing="false"  rotate="270.0" text="&gt;">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>
@@ -35,7 +35,7 @@
                         <String fx:value="botaoTransparent" />
                      </styleClass>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#btnSmais" rotate="270.0" text="&gt;">
+                  <Button mnemonicParsing="false" rotate="270.0" text="&gt;">
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font>

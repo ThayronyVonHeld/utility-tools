@@ -2,33 +2,41 @@ package com.sgr.utilitytools_v1.clock.timer;
 
 import com.sgr.utilitytools_v1.navigation.Navigator;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
 
 public class SelectTimerController {
-    @FXML private Label lblHoras, lblMinutos, lblSegundos;
-    private int h = 0, m = 0, s = 0;
 
-    @FXML
-    private void btnHmais() { h = (h < 23) ? h + 1 : 0; updateLabels(); }
-    @FXML
-    private void btnMmais() { m = (m < 59) ? m + 1 : 0; updateLabels(); }
-    @FXML
-    private void btnSmais() { s = (s < 59) ? s + 1 : 0; updateLabels(); }
-    // ... implementar os métodos de "menos" seguindo a mesma lógica ...
+    private final TimerService service = TimerService.getInstance();
 
-    private void updateLabels() {
-        lblHoras.setText(String.format("%02d", h));
-        lblMinutos.setText(String.format("%02d", m));
-        lblSegundos.setText(String.format("%02d", s));
-    }
+    @FXML private StackPane paneSelectTime;
+
+    private int horas = 0;
+    private int minutos = 1;
+    private int segundos = 0;
 
     @FXML
     private void playCronometro() {
-        // Salva no Service Global
-        TimerService.getInstance().setTime(h, m, s);
-        TimerService.getInstance().start();
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/SGR/UtilityTools/timer/timer.fxml")
+            );
 
-        // Navega para a tela de visualização (ajuste o caminho conforme seu projeto)
-        Navigator.loadView("/com/sgr/utilitytools_v1/clock/timer/timer_display.fxml");
+            Parent root = loader.load();
+
+            int totalSegundos = (horas * 3600) + (minutos * 60) + segundos;
+
+            // 🔥 estado vai pro service
+            service.setTime(totalSegundos);
+            service.start();
+
+            // 🔥 troca tela
+            paneSelectTime.getChildren().setAll(root);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
