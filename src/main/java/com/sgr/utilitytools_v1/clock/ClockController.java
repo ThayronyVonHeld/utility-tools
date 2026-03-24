@@ -41,7 +41,8 @@ public class ClockController implements Initializable {
     private void loadTimer() {
         ClockNavigator.loadClockView(
                 clockStackPane,
-                "/com/sgr/utilitytools_v1/clock/timer/timer.fxml"
+                "/com/sgr/utilitytools_v1/clock/timer/selectTimer.fxml"
         );
     }
+
 }

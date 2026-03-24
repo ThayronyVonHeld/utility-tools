@@ -5,70 +5,44 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
 public class TimerService {
-
-    private final Timer timer = new Timer();
     private static TimerService instance;
+    private final IntegerProperty remainingSeconds = new SimpleIntegerProperty(0);
+    private int totalSeconds = 0;
+    private boolean running = false;
+    private int tickCounter = 0;
+
+    private TimerService() {
+        ClockService.getInstance().tickProperty().addListener((obs, old, newVal) -> update());
+    }
 
     public static TimerService getInstance() {
-        if (instance == null) {
-            instance = new TimerService();
-        }
+        if (instance == null) instance = new TimerService();
         return instance;
     }
 
-    public TimerService() {
-        ClockService.getInstance().tickProperty().addListener((obs, oldVal, newVal) -> {
-            update();
-        });
+    public void setInitialTime(int seconds) {
+        this.totalSeconds = seconds;
+        this.remainingSeconds.set(seconds);
+        this.running = false;
     }
 
-    public void setTime(int seconds) {
-        timer.setTotalSeconds(seconds);
-        timer.setRemainingSeconds(seconds);
-    }
-
-    public void start() {
-        if (timer.isRunning()) return;
-        timer.setRunning(true);
-    }
-
-    public void pause() {
-        timer.setRunning(false);
-    }
-
-    public void reset() {
-        timer.setRemainingSeconds(timer.getTotalSeconds());
-        timer.setRunning(false);
-    }
+    public void start() { if (remainingSeconds.get() > 0) running = true; }
+    public void pause() { running = false; }
 
     private void update() {
-        if (!timer.isRunning()) return;
-
-        int remaining = timer.getRemainingSeconds() - 1;
-
-        if (remaining <= 0) {
-            timer.setRemainingSeconds(0);
-            timer.setRunning(false);
-            onFinish();
-        } else {
-            timer.setRemainingSeconds(remaining);
+        if (!running) return;
+        tickCounter++;
+        if (tickCounter >= 100) { // Sincroniza 10ms -> 1s
+            tickCounter = 0;
+            if (remainingSeconds.get() > 0) {
+                remainingSeconds.set(remainingSeconds.get() - 1);
+            } else {
+                running = false;
+            }
         }
     }
 
-    private void onFinish() {
-        System.out.println("⏰ Timer finalizado!");
-        // tocar som depois
-    }
-
-    public int getRemainingSeconds() {
-        return timer.getRemainingSeconds();
-    }
-
-    public int getTotalSeconds() {
-        return timer.getTotalSeconds();
-    }
-
-    public boolean isRunning() {
-        return timer.isRunning();
-    }
+    public IntegerProperty remainingSecondsProperty() { return remainingSeconds; }
+    public int getTotalSeconds() { return totalSeconds; }
+    public boolean isRunning() { return running; }
 }
