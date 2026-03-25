@@ -69,4 +69,35 @@ public class TimerService {
         double currentTicks = (remainingSecondsProp.get() * 100.0) - tickCounter;
         return currentTicks / totalTicks;
     }
+
+
+public int getHoras(){
+
+        return timer.getHoras();
+}
+
+
+public int getMinutos(){
+
+        return timer.getMinutos();
+}
+
+public int getSegundos(){
+
+        return timer.getSegundos();
+}
+
+public void setH(int h){
+        timer.setHoras(h);
+}
+
+public void setM(int m){
+        timer.setMinutos(m);
+}
+
+public void setS(int s){
+        timer.setSegundos(s);
+}
+
+
 }

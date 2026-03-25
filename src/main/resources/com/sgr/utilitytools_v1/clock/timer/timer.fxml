@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@timer.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.clock.timer.TimerController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@timer.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.clock.timer.TimerController">
    <children>
       <AnchorPane fx:id="PaneARC" minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="430.0">
          <children>
@@ -25,7 +25,7 @@
             <Button layoutX="388.0" layoutY="321.0" mnemonicParsing="false" text="Stop" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="SelectTimerTeste" prefHeight="297.0" prefWidth="600.0">
+      <AnchorPane fx:id="SelectTimerTeste" prefHeight="383.0" prefWidth="580.0">
          <children>
             <HBox layoutX="177.0" layoutY="50.0" prefHeight="49.0" prefWidth="223.0" spacing="50.0">
                <children>
@@ -125,7 +125,7 @@
                </children>
             </HBox>
             <Button layoutX="177.0" layoutY="288.0" mnemonicParsing="false" onAction="#playTimer" prefHeight="25.0" prefWidth="62.0" text="Play" />
-            <Button layoutX="372.0" layoutY="288.0" mnemonicParsing="false" text="Reset" />
+            <Button layoutX="372.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleReset" text="Reset" />
          </children>
       </AnchorPane>
    </children>

@@ -14,6 +14,10 @@ public class TimerController {
     @FXML private Label timeLabel;
     @FXML private AnchorPane SelectTimerTeste;
     @FXML private AnchorPane PaneARC;
+    @FXML private Label lblHoras;
+    @FXML private Label lblMinutos;
+    @FXML private Label lblSegundos;
+    @FXML private StackPane paneSelectTime;
 
     private final TimerService service = TimerService.getInstance();
 
@@ -54,88 +58,6 @@ public class TimerController {
 
     // Aqui começa o Select
 
-    @FXML private Label lblHoras;
-    @FXML private Label lblMinutos;
-    @FXML private Label lblSegundos;
-    @FXML private StackPane paneSelectTime;
-
-    private int segundos = 0;
-    private int minutos = 0;
-    private int horas = 0;
-
-    @FXML
-    private void btnHmais(){
-        if(horas < 10){
-            horas++;
-        } else {
-            horas = 0;
-        }
-        lblHoras.setText((String.format("%02d", horas)));
-    }
-
-    @FXML
-    private void btnHmenos(){
-        if (horas > 0) {
-            horas--;
-        } else {
-            horas = 10;
-        }
-        lblHoras.setText((String.format("%02d", horas)));
-    }
-
-    @FXML
-    private void btnMmais(){
-        if(minutos < 59){
-            minutos++;
-        } else {
-            minutos = 0;
-        }
-        lblMinutos.setText((String.format("%02d", minutos)));
-    }
-
-    @FXML
-    private void btnMmenos(){
-        if (minutos > 0) {
-            minutos--;
-        } else {
-            minutos = 59;
-        }
-        lblMinutos.setText((String.format("%02d", minutos)));
-    }
-
-    @FXML
-    private void btnSmais(){
-        if(segundos < 59){
-            segundos++;
-        } else{
-            segundos = 0;
-        }
-        lblSegundos.setText((String.format("%02d", segundos)));
-    }
-
-    @FXML
-    private void btnSmenos(){
-        if (segundos > 0) {
-            segundos--;
-        } else {
-            segundos = 59;
-        }
-        lblSegundos.setText((String.format("%02d", segundos)));
-    }
-
-    int totalSegundos = (horas * 3600) + (minutos * 60) + segundos;
-
-    @FXML
-    private void playTimer() { // Nome que apareceu no seu log de erro
-        int total = (horas * 3600) + (minutos * 60) + segundos;
-        TimerService.getInstance().setInitialTime(total);
-        TimerService.getInstance().start();
-        SelectTimerTeste.setVisible(false);
-        PaneARC.opacityProperty().setValue(1);
-
-    }
-
-
     @FXML
     private void OpenSelectTimer(){
         SelectTimerTeste.setVisible(true);
@@ -143,6 +65,96 @@ public class TimerController {
 
     }
 
+    @FXML
+    private void btnHmais() {
+        int horas = service.getHoras();
+        if (horas < 10) {
+            horas++;
+            service.setH(horas);
+        } else {
+            horas = 0;
+            service.setH(horas);
+        }
+        lblHoras.setText((String.format("%02d", horas)));
 
+    }
 
+    @FXML
+    private void btnHmenos() {
+        int horas = service.getHoras();
+        if (horas > 0) {
+            horas--;
+            service.setH(horas);
+        } else {
+            horas = 10;
+            service.setH(horas);
+        }
+        lblHoras.setText((String.format("%02d", horas)));
+
+    }
+
+    @FXML
+    private void btnMmais() {
+       int minutos = service.getMinutos();
+        if (minutos < 59) {
+            minutos++;
+            service.setM(minutos);
+        } else {
+            minutos = 0;
+            service.setM(minutos);
+        }
+        lblHoras.setText((String.format("%02d", minutos)));
+
+        }
+
+    @FXML
+    private void btnMmenos() {
+        int minutos = service.getMinutos();
+        if (minutos > 0) {
+            minutos--;
+            service.setM(minutos);
+        } else {
+            minutos = 59;
+            service.setM(minutos);
+        }
+        lblMinutos.setText((String.format("%02d", minutos)));
+    }
+
+    @FXML
+    private void btnSmais() {
+        int segundos = service.getSegundos();
+        if (segundos < 59) {
+            segundos++;
+            service.setS(segundos);
+        } else {
+            segundos = 0;
+            service.setS(segundos);
+        }
+        lblSegundos.setText((String.format("%02d", segundos)));
+    }
+
+    @FXML
+    private void btnSmenos() {
+      int segundos = service.getSegundos();
+        if (segundos > 0) {
+            segundos--;
+            service.setS(segundos);
+
+        } else {
+            segundos = 59;
+            service.setS(segundos);
+        }
+        lblSegundos.setText((String.format("%02d", segundos)));
+    }
+
+    @FXML
+    private void playTimer() {
+        int total = (service.getHoras() * 3600) + (service.getMinutos() * 60) + service.getSegundos();
+        TimerService.getInstance().setInitialTime(total);
+        TimerService.getInstance().start();
+        SelectTimerTeste.setVisible(false);
+        PaneARC.opacityProperty().setValue(1);
+
+    }
 }
+
