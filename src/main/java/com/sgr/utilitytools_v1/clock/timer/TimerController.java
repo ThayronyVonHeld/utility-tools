@@ -103,7 +103,7 @@ public class TimerController {
             minutos = 0;
             service.setM(minutos);
         }
-        lblHoras.setText((String.format("%02d", minutos)));
+        lblMinutos.setText((String.format("%02d", minutos)));
 
         }
 
