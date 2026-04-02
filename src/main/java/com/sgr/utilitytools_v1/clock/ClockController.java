@@ -1,6 +1,5 @@
 package com.sgr.utilitytools_v1.clock;
 
-import com.sgr.utilitytools_v1.clock.ClockNavigator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.StackPane;
@@ -17,7 +16,7 @@ public class ClockController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ClockNavigator.loadClockView(
                 clockStackPane,
-                "/com/sgr/utilitytools_v1/clock/alarm/alarm.fxml"
+                "/com/sgr/utilitytools_v1/clock/alarm/alarmview.fxml"
         );
     }
 
@@ -25,7 +24,7 @@ public class ClockController implements Initializable {
     private void loadAlarm() {
         ClockNavigator.loadClockView(
                 clockStackPane,
-                "/com/sgr/utilitytools_v1/clock/alarm/alarm.fxml"
+                "/com/sgr/utilitytools_v1/clock/alarm/alarmview.fxml"
         );
     }
 
