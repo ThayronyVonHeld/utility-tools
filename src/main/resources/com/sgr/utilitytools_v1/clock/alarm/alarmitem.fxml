@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="109.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgr.utilitytools_v1.clock.alarm.AlarmItemController">
+   <children>
+      <JFXToggleButton layoutX="189.0" layoutY="14.0" prefHeight="36.0" prefWidth="77.0" textFill="WHITE" toggleColor="#0949b9" />
+      <Label layoutX="24.0" layoutY="18.0" prefHeight="51.0" prefWidth="94.0" text="00:00">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="75.0" prefHeight="17.0" prefWidth="167.0" text="alarme em xxxxx horas/dias" />
+   </children>
+</AnchorPane>

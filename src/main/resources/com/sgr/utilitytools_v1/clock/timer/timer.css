@@ -44,5 +44,8 @@
     -fx-background-radius: 30;
     -fx-border-radius: 30;
     -fx-padding: 8 15 8 15;
-}
+ }
 
+ .teste{
+ -fx-background-color:#d7d7d7
+ }

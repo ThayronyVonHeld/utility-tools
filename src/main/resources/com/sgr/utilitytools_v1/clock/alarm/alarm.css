@@ -1,0 +1,20 @@
+.layoutEditor{
+-fx-background-radius: 20;
+ -fx-border-radius: 20;
+}
+
+.colorLabel{
+-fx-background-color:white;
+-fx-background-radius: 10;
+ -fx-border-radius: 10;
+}
+
+.bottontransparent{
+ -fx-background-color: transparent;
+}
+
+.bottonCircle{
+-fx-background-radius: 360;
+
+
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="309.0" stylesheets="@alarm.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="491.0" prefWidth="309.0" styleClass="layoutEditor">
+         <children>
+            <VBox layoutX="43.0" layoutY="56.0" prefHeight="139.0" prefWidth="224.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: transparent;" styleClass="bottontransparent">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="bottontransparent">
+                           <graphic>
+                              <FontIcon iconLiteral="fas-angle-up" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="bottontransparent">
+                           <graphic>
+                              <FontIcon iconLiteral="fas-angle-up" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="82.0" prefWidth="224.0" styleClass="colorLabel">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="95.0" text="00">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="72.0" prefWidth="5.0" text=":">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="97.0" text="00">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="224.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" styleClass="bottontransparent">
+                           <graphic>
+                              <FontIcon iconLiteral="fas-angle-down" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" styleClass="bottontransparent">
+                           <graphic>
+                              <FontIcon iconLiteral="fas-angle-down" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="27.0" layoutY="14.0" text="Editar Alarme">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" layoutX="225.0" layoutY="17.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="38.0" styleClass="bottontransparent" />
+            <FontIcon iconColor="#514f4f" iconLiteral="fas-edit" iconSize="15" layoutX="27.0" layoutY="229.0" wrappingWidth="16.0" />
+            <TextField layoutX="52.0" layoutY="212.0" prefHeight="25.0" prefWidth="207.0" promptText="Alarm(1)" />
+            <FontIcon iconColor="RED" iconLiteral="far-trash-alt" iconSize="20" layoutX="243.0" layoutY="35.0" wrappingWidth="15.75" />
+            <CheckBox layoutX="27.0" layoutY="264.0" mnemonicParsing="false" text="Repetir Alarme" />
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="290.0" prefHeight="45.0" prefWidth="297.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Dom">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Seg">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Ter">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Qua">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Qui">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Sex">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" styleClass="bottonCircle" text="Sab">
+                     <font>
+                        <Font name="Arial" size="9.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <FontIcon iconLiteral="" layoutX="35.0" layoutY="383.0" />
+            <SplitMenuButton layoutX="62.0" layoutY="372.0" mnemonicParsing="false" text="SplitMenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
