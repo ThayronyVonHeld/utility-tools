@@ -23,7 +23,7 @@ public class TimerController {
 
     @FXML
     public void initialize() {
-        // Atualiza a cada 10ms para o arco se mover suavemente
+
         ClockService.getInstance().tickProperty().addListener((obs, old, newVal) -> {
             updateLabel();
         });
@@ -35,7 +35,6 @@ public class TimerController {
     private void updateLabel() {
         int remaining = service.getRemainingSeconds();
 
-        // Formata o texto
         int h = remaining / 3600;
         int m = (remaining % 3600) / 60;
         int s = remaining % 60;
