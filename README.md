@@ -1,93 +1,111 @@
-# 🛠️ UtilityTools (Projeto Canivete)
+[Clique aqui para ler na versão em PT-BR](https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools)
 
-Aplicação desktop desenvolvida para **centralizar ferramentas operacionais e informações técnicas em um único ambiente**, funcionando como um hub de utilidades para rotinas técnicas.
-
-O objetivo do projeto é reunir funcionalidades utilizadas no dia a dia de operações técnicas como organização de tarefas, armazenamento de documentos e acesso rápido a informações importantes em uma interface única.
-
-> ⚠️ O projeto encontra-se em desenvolvimento.
+Aqui está a versão adaptada para o inglês, mantendo o tom profissional e com pequenas melhorias naturais de escrita:
 
 ---
 
-# 🚀 Tecnologias Utilizadas
+# 🛠️ UtilityTools Project
 
-### Aplicação Desktop
+Desktop application developed based on real-world experience in technical operations, simulating a support environment that centralizes tools used in professional routines.
+
+> ⚠️ Project under continuous development, with incremental implementation of features.
+
+---
+
+# 🚀 Technologies Used
+
+### Desktop Application
 
 * Java
 * JavaFX
 
-### Ferramentas de Desenvolvimento
+### Tools
 
 * IntelliJ IDEA
 * Git / GitHub
-* Figma (prototipação da interface)
+* Figma (UI prototyping)
 
 ---
 
-# 🏗️ Arquitetura do Projeto
+# 🏗️ Architecture
 
-A aplicação segue uma arquitetura baseada no padrão **MVC (Model-View-Controller)** para separar responsabilidades entre interface, lógica de aplicação e dados.
+The project follows the **MVC (Model-View-Controller)** pattern to ensure clear separation of concerns and improve scalability.
 
----
-
-# 💡 Funcionalidades
-
-Funcionalidades planejadas para a aplicação:
-
-✔ Dashboard com atalhos rápidos
-
-✔ Sistema de notas para organização de tarefas
-
-✔ Cofre de senhas para armazenamento seguro
-
-✔ Central de documentos e manuais técnicos
-
-✔ Lista de ramais e contatos com ferramenta de busca
-
-✔ Ferramentas de tempo (Timer, Stopwatch e Alarm)
-
-✔ Agenda com calendário
-
-✔ Atalho para sistemas externos
-
+Additionally, the application is structured into independent modules, allowing incremental evolution without excessive coupling.
 
 ---
 
-# 📚 Conceitos Aplicados
+# 💡 Features
 
-* Programação Orientada a Objetos (POO)
-* Arquitetura MVC
-* Organização em camadas
-* Desenvolvimento de interfaces com JavaFX
-* Modularização de funcionalidades
+### Already implemented
+
+* Timer
+* Stopwatch
+
+### In development
+
+* Dashboard with quick access shortcuts
+* Notes system
+* Password vault
+* Technical documents center
+* Contact list with search functionality
+* Time tools (Timer, Stopwatch, Alarm)
+* Calendar-based scheduler
+* Integration with external systems
 
 ---
 
-# 🧪 Testes
+# ⚙️ How to Run
 
-Durante o desenvolvimento, as funcionalidades podem ser testadas diretamente pela interface da aplicação.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/utility-tools.git
 
-Os módulos da aplicação são implementados de forma incremental, permitindo validação contínua das funcionalidades.
+# Open in IntelliJ IDEA
+
+# Run the main class (Main.java)
+```
+
+Requirements:
+
+* Java 17+
+* JavaFX properly configured
 
 ---
 
-# 🎨 Protótipo da Interface
+# 📚 Concepts Applied
 
-O protótipo inicial da aplicação foi desenvolvido no Figma.
+* Object-Oriented Programming (OOP)
+* MVC Architecture
+* System modularization
+* Layered architecture
+* UI development with JavaFX
 
-Link do protótipo:
+---
+
+# 🧠 Project Challenges
+
+* Modular organization of multiple features within a single application
+* State management across different modules
+* Designing a scalable UI with JavaFX
+* Planning an architecture that supports continuous growth
+
+---
+
+# 🎨 Prototype
+
+Initial prototype developed in Figma:
 
 [https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools](https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools)
 
 ---
 
-# 👨‍💻 Autor
+# 👨‍💻 Author
 
 **Thayrony Kayke Ferreira Von Held**
-
-Estudante de Análise e Desenvolvimento de Sistemas
-Desenvolvedor com foco em backend e arquitetura de software.
+Systems Analysis and Development student
+Focused on backend and software architecture
 
 LinkedIn:
-https://www.linkedin.com/in/thayrony-von-held-b14ba7256/
-
+[https://www.linkedin.com/in/thayrony-von-held-b14ba7256/](https://www.linkedin.com/in/thayrony-von-held-b14ba7256/)
 
