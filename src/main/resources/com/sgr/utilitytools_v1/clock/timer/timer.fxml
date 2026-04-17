@@ -36,6 +36,7 @@
                      <columnConstraints>
                         <ColumnConstraints percentWidth="33.33" />
                         <ColumnConstraints percentWidth="33.33" />
+                        <ColumnConstraints percentWidth="33.33" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints percentHeight="30" />
@@ -60,6 +61,7 @@
                         </Button>
                         <Label fx:id="lblHoras" style="-fx-font-size: 50px;" text="00" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                         <Label fx:id="lblMinutos" style="-fx-font-size: 50px;" text="00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Label fx:id="lblSegundos" style="-fx-font-size: 50px;" text="00" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                         <Button onAction="#btnHmenos" styleClass="botaoTransparent" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <graphic>
                               <FontIcon iconColor="#5e5e5e" iconLiteral="fas-angle-down" />
@@ -79,6 +81,8 @@
                   </GridPane>
                </children>
             </Pane>
+            <Button layoutX="187.0" layoutY="298.0" mnemonicParsing="false" onAction="#playTimer" prefHeight="25.0" prefWidth="62.0" text="Play" />
+            <Button layoutX="382.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleReset" text="Reset" />
          </children>
       </AnchorPane>
    </children>
