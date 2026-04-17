@@ -1,4 +1,4 @@
-[Readme com versão em PT-BR](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README.md)
+[Readme versão em PT-BR](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README-PT.md)
 
 ---
 # 🛠️ UtilityTools Project
