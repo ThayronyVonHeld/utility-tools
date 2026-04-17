@@ -1,4 +1,4 @@
-[Clique aqui versão em PT-BR]([https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README.md))
+[Clique aqui versão em PT-BR](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README.md)
 
 ---
 # 🛠️ UtilityTools Project
