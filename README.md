@@ -1,9 +1,6 @@
-[Clique aqui para ler na versão em PT-BR](https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools)
-
-Aqui está a versão adaptada para o inglês, mantendo o tom profissional e com pequenas melhorias naturais de escrita:
+[Clique aqui versão em PT-BR]([https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README.md))
 
 ---
-
 # 🛠️ UtilityTools Project
 
 Desktop application developed based on real-world experience in technical operations, simulating a support environment that centralizes tools used in professional routines.
