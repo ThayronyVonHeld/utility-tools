@@ -1,4 +1,4 @@
-[Clique aqui versão em EN](https://www.figma.com/board/5xvkGaAKX3YyR5xrYYP1T8/Projeto-Utility-Tools)
+[Readme versão em EN](https://github.com/ThayronyVonHeld/UtilityTools_v1/blob/master/README.md)
 
 # 🛠️ UtilityTools (Projeto Canivete)
 
