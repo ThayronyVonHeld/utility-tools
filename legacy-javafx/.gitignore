@@ -13,9 +13,13 @@ target/
 .idea/encodings.xml
 .idea/vcs.xml
 .idea/gitignore
+.idea
 *.iws
 *.iml
 *.ipr
+.idea
+out/
+target/
 
 ### Eclipse ###
 .apt_generated
