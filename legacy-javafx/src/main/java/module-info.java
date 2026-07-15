@@ -11,6 +11,7 @@ module com.sgr.utilitytools_v1 {
     requires com.jfoenix;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.fontawesome6;
+    requires javafx.base;
 
     opens com.sgr.utilitytools_v1.app to javafx.fxml;
     opens com.sgr.utilitytools_v1.dashboard to javafx.fxml;
@@ -18,6 +19,7 @@ module com.sgr.utilitytools_v1 {
     opens com.sgr.utilitytools_v1.clock.stopwatch to javafx.fxml;
     opens com.sgr.utilitytools_v1.clock.alarm to javafx.fxml;
     opens com.sgr.utilitytools_v1.clock.timer to javafx.fxml;
+    opens com.sgr.utilitytools_v1.phonescontacts to javafx.fxml;
 
     exports com.sgr.utilitytools_v1.app;
 }
