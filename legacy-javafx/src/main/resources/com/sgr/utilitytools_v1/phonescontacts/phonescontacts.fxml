@@ -16,14 +16,11 @@
          <center>
             <StackPane prefHeight="370.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <ListView fx:id="rj" prefHeight="200.0" prefWidth="200.0" />
-                  <ListView fx:id="sp" prefHeight="200.0" prefWidth="200.0" />
-                  <ListView fx:id="bh" prefHeight="200.0" prefWidth="200.0" />
-                  <ListView fx:id="bsb" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="lista" prefHeight="200.0" prefWidth="200.0" />
                   <Pane fx:id="paineadd" opacity="0.8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
                      <children>
                         <Button layoutX="365.0" layoutY="256.0" mnemonicParsing="false" text="Cancelar" />
-                        <Button layoutX="180.0" layoutY="256.0" mnemonicParsing="false" onAction="#atualizarcontatos" text="Salvar" />
+                        <Button layoutX="180.0" layoutY="256.0" mnemonicParsing="false" onAction="#salvarContato" text="Salvar" />
                         <TextField fx:id="telefone" layoutX="236.0" layoutY="96.0" prefHeight="25.0" prefWidth="129.0" />
                         <TextField fx:id="name" layoutX="236.0" layoutY="134.0" prefHeight="25.0" prefWidth="129.0" />
                         <Label layoutX="171.0" layoutY="138.0" text="Telefone" />
