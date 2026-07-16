@@ -12,27 +12,36 @@ import javafx.scene.layout.Pane;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class PhonesContactsController implements Initializable {
 
-    @FXML private Pane paineadd;
-    @FXML private TextField name;
-    @FXML private TextField telefone;
-    @FXML private ChoiceBox<String> myChoiceBox;
-    @FXML private ChoiceBox<String> atribuir;
-    @FXML private ListView rj;
-    @FXML private ListView sp;
-    @FXML private ListView bh;
-    @FXML private ListView bsb;
+    @FXML
+    private Pane paineadd;
+    @FXML
+    private TextField name;
+    @FXML
+    private TextField telefone;
+    @FXML
+    private ChoiceBox<String> myChoiceBox;
+    @FXML
+    private ChoiceBox<String> atribuir;
+    @FXML
+    private ListView listaContatos;
+
 
     private ObservableList<String> Rio = FXCollections.observableArrayList();
     private ObservableList<String> Sp = FXCollections.observableArrayList();
     private ObservableList<String> Minas = FXCollections.observableArrayList();
     private ObservableList<String> Bsb = FXCollections.observableArrayList();
 
-    private String[] pracas = {"Rio de Janeiro", "São Paulo", "Belo Horizonte", "Brasília", "Outros"};
+    Map<String, ObservableList<String>> contatos = new HashMap<>();
 
+    private ObservableList<String> lista = contatos.get(atribuir.getValue());
+
+    private String[] pracas = {"Rio de Janeiro", "São Paulo", "Belo Horizonte", "Brasília", "Outros"};
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,27 +49,37 @@ public class PhonesContactsController implements Initializable {
         atribuir.getItems().addAll(pracas);
         paineadd.setVisible(false);
 
-    myChoiceBox.setOnAction(this::getPraca);
+        rj.setItems(Rio);
+        bh.setItems(Minas);
+        sp.setItems(Sp);
+        bsb.setItems(Bsb);
+
+        contatos.put("Rio de Janeiro", Rio);
+        contatos.put("São Paulo", Sp);
+        contatos.put("Belo Horizonte", Minas);
+        contatos.put("Brasília", Bsb);
+
+        myChoiceBox.setOnAction(this::getPraca);
 
     }
 
     private void getPraca(javafx.event.ActionEvent actionEvent) {
-        if(myChoiceBox.getValue().equals("Rio de Janeiro")){
+        if (myChoiceBox.getValue().equals("Rio de Janeiro")) {
             rj.setVisible(true);
             sp.setVisible(false);
             bh.setVisible(false);
             bsb.setVisible(false);
-        } else if (myChoiceBox.getValue().equals("São Paulo")){
+        } else if (myChoiceBox.getValue().equals("São Paulo")) {
             rj.setVisible(false);
             sp.setVisible(true);
             bh.setVisible(false);
             bsb.setVisible(false);
-        } else if(myChoiceBox.getValue().equals("Belo Horizonte")){
+        } else if (myChoiceBox.getValue().equals("Belo Horizonte")) {
             rj.setVisible(false);
             sp.setVisible(false);
             bh.setVisible(true);
             bsb.setVisible(false);
-        } else if(myChoiceBox.getValue().equals("Brasília")){
+        } else if (myChoiceBox.getValue().equals("Brasília")) {
             rj.setVisible(false);
             sp.setVisible(false);
             bh.setVisible(false);
@@ -68,47 +87,17 @@ public class PhonesContactsController implements Initializable {
         }
     }
 
-    public void addContatos(){
+    public void addContatos() {
         name.clear();
         telefone.clear();
         paineadd.setVisible(true);
 
     }
 
-    public void atualizarcontatos(){
-        if (atribuir.getValue().equals("Rio de Janeiro")){
-            Rio.add(String.format("%s - %s",
-                    name.getText(),
-                    telefone.getText()));
+    public void atualizarcontatos() {
 
-            rj.setItems(Rio);
+        contatos.get(atribuir.getValue()).add(name + " - " + telefone);
 
-            paineadd.setVisible(false);
-        } else if(atribuir.getValue().equals("São Paulo")){
-            Sp.add(String.format("%s - %s",
-                    name.getText(),
-                    telefone.getText()));
-
-            sp.setItems(Sp);
-
-            paineadd.setVisible(false);
-        } else if(atribuir.getValue().equals("Belo Horizonte")){
-            Minas.add(String.format("%s - %s",
-                    name.getText(),
-                    telefone.getText()));
-
-            bh.setItems(Minas);
-
-            paineadd.setVisible(false);
-        } else if(atribuir.getValue().equals("Brasília")){
-            Bsb.add(String.format("%s - %s",
-                    name.getText(),
-                    telefone.getText()));
-
-            bsb.setItems(Bsb);
-
-            paineadd.setVisible(false);
-        }
+        paineadd.setVisible(false);
     }
-
 }

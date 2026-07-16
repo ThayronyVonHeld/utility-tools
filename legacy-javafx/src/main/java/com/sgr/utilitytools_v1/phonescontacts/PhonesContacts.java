@@ -4,4 +4,6 @@ import java.util.ArrayList;
 
 public class PhonesContacts {
 
+    private String nome;
+    private String telefone;
 }
