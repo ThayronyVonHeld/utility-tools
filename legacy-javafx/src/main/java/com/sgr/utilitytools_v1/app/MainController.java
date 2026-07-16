@@ -9,6 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+
+import java.awt.*;
+import java.net.URI;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -126,10 +129,25 @@ public class MainController implements Initializable {
     @FXML
     private void openTimeSheet(){
 
+        try {
+
+            Desktop.getDesktop().browse(new URI("https://www.youtube.com/"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
 }
 
     @FXML
     private void openIntranet(){
+
+        try {
+
+            Desktop.getDesktop().browse(new URI("https://www.linkedin.com/in/thayrony-von-held-b14ba7256/"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
