@@ -20,6 +20,7 @@ module com.sgr.utilitytools_v1 {
     opens com.sgr.utilitytools_v1.clock.alarm to javafx.fxml;
     opens com.sgr.utilitytools_v1.clock.timer to javafx.fxml;
     opens com.sgr.utilitytools_v1.phonescontacts to javafx.fxml;
+    opens com.sgr.utilitytools_v1.passwordsafe to javafx.fxml;
 
     exports com.sgr.utilitytools_v1.app;
 }

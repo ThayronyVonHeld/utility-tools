@@ -130,8 +130,7 @@ public class MainController implements Initializable {
     private void openTimeSheet(){
 
         try {
-
-            Desktop.getDesktop().browse(new URI("https://www.youtube.com/"));
+            Desktop.getDesktop().browse(new URI("https://github.com/ThayronyVonHeld"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -144,7 +143,7 @@ public class MainController implements Initializable {
 
         try {
 
-            Desktop.getDesktop().browse(new URI("https://www.linkedin.com/in/thayrony-von-held-b14ba7256/"));
+            Desktop.getDesktop().browse(new URI("https://github.com/ThayronyVonHeld"));
         } catch (Exception e) {
             e.printStackTrace();
         }
